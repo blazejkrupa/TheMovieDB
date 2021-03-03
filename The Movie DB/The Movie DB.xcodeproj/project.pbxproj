@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		412B603825EFA71400799D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B603725EFA71400799D90 /* AppDelegate.swift */; };
-		412B603A25EFA71400799D90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B603925EFA71400799D90 /* SceneDelegate.swift */; };
-		412B603C25EFA71400799D90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B603B25EFA71400799D90 /* ViewController.swift */; };
-		412B603F25EFA71400799D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412B603D25EFA71400799D90 /* Main.storyboard */; };
 		412B604125EFA71700799D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412B604025EFA71700799D90 /* Assets.xcassets */; };
 		412B604425EFA71700799D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412B604225EFA71700799D90 /* LaunchScreen.storyboard */; };
 		412B604F25EFA71700799D90 /* The_Movie_DBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B604E25EFA71700799D90 /* The_Movie_DBTests.swift */; };
 		412B605A25EFA71700799D90 /* The_Movie_DBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B605925EFA71700799D90 /* The_Movie_DBUITests.swift */; };
+		412B607525EFAB0300799D90 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412B607425EFAB0300799D90 /* MoviesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +35,6 @@
 /* Begin PBXFileReference section */
 		412B603425EFA71400799D90 /* The Movie DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Movie DB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		412B603725EFA71400799D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		412B603925EFA71400799D90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		412B603B25EFA71400799D90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		412B603E25EFA71400799D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		412B604025EFA71700799D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		412B604325EFA71700799D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		412B604525EFA71700799D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +44,7 @@
 		412B605525EFA71700799D90 /* The Movie DBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Movie DBUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		412B605925EFA71700799D90 /* The_Movie_DBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Movie_DBUITests.swift; sourceTree = "<group>"; };
 		412B605B25EFA71700799D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		412B607425EFAB0300799D90 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +95,8 @@
 		412B603625EFA71400799D90 /* The Movie DB */ = {
 			isa = PBXGroup;
 			children = (
-				412B603725EFA71400799D90 /* AppDelegate.swift */,
-				412B603925EFA71400799D90 /* SceneDelegate.swift */,
-				412B603B25EFA71400799D90 /* ViewController.swift */,
-				412B603D25EFA71400799D90 /* Main.storyboard */,
-				412B604025EFA71700799D90 /* Assets.xcassets */,
-				412B604225EFA71700799D90 /* LaunchScreen.storyboard */,
-				412B604525EFA71700799D90 /* Info.plist */,
+				412B607925EFAB7F00799D90 /* Supporting Files */,
+				412B607425EFAB0300799D90 /* MoviesTableViewController.swift */,
 			);
 			path = "The Movie DB";
 			sourceTree = "<group>";
@@ -126,6 +117,17 @@
 				412B605B25EFA71700799D90 /* Info.plist */,
 			);
 			path = "The Movie DBUITests";
+			sourceTree = "<group>";
+		};
+		412B607925EFAB7F00799D90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				412B603725EFA71400799D90 /* AppDelegate.swift */,
+				412B604025EFA71700799D90 /* Assets.xcassets */,
+				412B604225EFA71700799D90 /* LaunchScreen.storyboard */,
+				412B604525EFA71700799D90 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +235,6 @@
 			files = (
 				412B604425EFA71700799D90 /* LaunchScreen.storyboard in Resources */,
 				412B604125EFA71700799D90 /* Assets.xcassets in Resources */,
-				412B603F25EFA71400799D90 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				412B603C25EFA71400799D90 /* ViewController.swift in Sources */,
+				412B607525EFAB0300799D90 /* MoviesTableViewController.swift in Sources */,
 				412B603825EFA71400799D90 /* AppDelegate.swift in Sources */,
-				412B603A25EFA71400799D90 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +296,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		412B603D25EFA71400799D90 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				412B603E25EFA71400799D90 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		412B604225EFA71700799D90 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
