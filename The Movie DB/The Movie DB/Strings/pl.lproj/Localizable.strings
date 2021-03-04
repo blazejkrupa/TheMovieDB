@@ -8,3 +8,6 @@
 
 
 "Movies.Title" = "Filmy";
+"Movie.Detail.Caption" = "Opis";
+"Movie.Detail.Rating" = "Oceny: %@";
+"Movie.Detail.Rating.NA" = "Niedostępne";

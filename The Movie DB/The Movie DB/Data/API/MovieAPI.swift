@@ -58,4 +58,8 @@ class MovieAPI {
             completion(data)
         }
     }
+    
+    static func clearCache() {
+        imageCache.removeAllObjects()
+    }
 }

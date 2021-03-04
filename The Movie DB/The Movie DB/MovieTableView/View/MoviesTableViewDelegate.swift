@@ -9,7 +9,7 @@ import UIKit
 
 final class MoviesTableViewDelegate:NSObject, UITableViewDelegate {
     
-    private var viewModel: MoviesViewModel
+    private let viewModel: MoviesViewModel
     
     init(viewModel: MoviesViewModel) {
         self.viewModel = viewModel

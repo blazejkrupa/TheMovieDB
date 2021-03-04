@@ -12,6 +12,7 @@ struct MovieDetail: Decodable {
     var title: String
     var overview: String
     var poster_path: String
+    var rating: String?
     /// date format "YYYY-MM-dd"
     var release_date: String
     var genres: [Genre]

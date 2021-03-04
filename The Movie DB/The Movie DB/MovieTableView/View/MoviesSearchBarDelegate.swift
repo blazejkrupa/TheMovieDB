@@ -8,7 +8,7 @@
 import UIKit
 
 class MoviesSearchBarDelegate:NSObject, UISearchBarDelegate {
-    private var viewModel: MoviesViewModel
+    private let viewModel: MoviesViewModel
     
     init(viewModel: MoviesViewModel) {
         self.viewModel = viewModel

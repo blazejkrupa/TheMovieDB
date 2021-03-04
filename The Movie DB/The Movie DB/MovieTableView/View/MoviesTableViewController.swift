@@ -9,7 +9,7 @@ import UIKit
 
 final class MoviesTableViewController: UITableViewController {
     
-    private var viewModel = MoviesViewModel()
+    private let viewModel = MoviesViewModel()
     private lazy var moviesTableViewDelegate = MoviesTableViewDelegate(viewModel: self.viewModel)
     private lazy var moviesTableViewDataSource = MoviesTableViewDataSource(viewModel: self.viewModel)
     private lazy var moviesSearchBarDelegate = MoviesSearchBarDelegate(viewModel: self.viewModel)
@@ -20,6 +20,11 @@ final class MoviesTableViewController: UITableViewController {
         setupTableView()
         setupSearchController()
         bindViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadSelectedIndexPath()
     }
     
     private func setupNavigationController() {
@@ -56,8 +61,14 @@ final class MoviesTableViewController: UITableViewController {
         }
     }
     
+    private func reloadSelectedIndexPath() {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.reloadRows(at: [indexPath], with: .none)
+        }
+    }
+    
     private func showDetailMovieViewController(for item: MovieViewModel) {
-        let detail = UIViewController()
+        let detail = MovieDetailViewController(viewModel: .init(movie: item))
         navigationController?.pushViewController(detail, animated: true)
     }
     

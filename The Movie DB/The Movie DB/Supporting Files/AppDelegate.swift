@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func applicationDidReceiveMemoryWarning(_ application: UIApplication) {
+        MovieAPI.clearCache()
+    }
+    
     private func setWindow() {
         self.window = UIWindow()
         let rootNC = UINavigationController(rootViewController: MoviesTableViewController())

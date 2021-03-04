@@ -7,9 +7,9 @@
 
 import UIKit
 
-class MoviesTableViewDataSource: NSObject, UITableViewDataSource {
+final class MoviesTableViewDataSource: NSObject, UITableViewDataSource {
     
-    private var viewModel: MoviesViewModel
+    private let viewModel: MoviesViewModel
     
     init(viewModel: MoviesViewModel) {
         self.viewModel = viewModel

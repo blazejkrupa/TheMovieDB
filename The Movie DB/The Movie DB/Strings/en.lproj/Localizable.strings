@@ -8,3 +8,6 @@
 
 
 "Movies.Title" = "Movies";
+"Movie.Detail.Caption" = "Overview";
+"Movie.Detail.Rating" = "Rating: %@";
+"Movie.Detail.Rating.NA" = "N/A";

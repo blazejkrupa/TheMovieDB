@@ -13,6 +13,9 @@ protocol Localizable {
 
 enum Strings: String {
     case movies_title = "Movies.Title"
+    case movie_detail_caption = "Movie.Detail.Caption"
+    case movie_detail_rating = "Movie.Detail.Rating"
+    case movie_detail_rating_na = "Movie.Detail.Rating.NA"
     
 }
 

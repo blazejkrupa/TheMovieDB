@@ -9,20 +9,17 @@ import UIKit
 
 final class MoviesTableViewCell: UITableViewCell {
     
-    private var coverImageView: UIImageView = .init(borderWidth: 1, contentMode: .scaleAspectFit)
+    private let coverImageView: UIImageView = .init(borderWidth: 1, contentMode: .scaleAspectFit)
     
-    private var titleLabel: UILabel = .init(text: nil,
-                                            withFontType: .bold,
+    private let titleLabel: UILabel = .init(withFontType: .bold,
                                             size: 14,
                                             textColor: .black)
     
-    private var releaseDateLabel: UILabel = .init(text: nil,
-                                                  withFontType: .normal,
+    private let releaseDateLabel: UILabel = .init(withFontType: .normal,
                                                   size: 12,
                                                   textColor: .black)
     
-    private var durationLabel: UILabel = .init(text: nil,
-                                               withFontType: .normal,
+    private let durationLabel: UILabel = .init(withFontType: .normal,
                                                size: 12,
                                                textColor: .black)
     
@@ -85,7 +82,7 @@ final class MoviesTableViewCell: UITableViewCell {
 }
 
 
-private extension MoviesTableViewCell {
+extension MoviesTableViewCell {
     
     private func setupViews() {
         contentView.addSubview(coverImageView)

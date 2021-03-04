@@ -14,6 +14,7 @@ final class MovieViewModel {
     private(set) var imagePath: String
     private(set) var id: Int
     private(set) var isFavorite: Bool = false
+    private(set) var rating: Double
     
     init(item: Movie, favoriteIds: Set<Int>) {
         self.title = item.title
@@ -31,6 +32,7 @@ final class MovieViewModel {
         } else {
             self.imagePath = ""
         }
+        self.rating = item.vote_average
         isFavorite = favoriteIds.contains(item.id)
         self.id = item.id
     }
