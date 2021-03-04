@@ -37,6 +37,7 @@
 		41E2C35425F12F530085B527 /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E2C35325F12F530085B527 /* UIStackViewExtension.swift */; };
 		41E2C35C25F147D90085B527 /* MoviesSearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E2C35B25F147D90085B527 /* MoviesSearchBarDelegate.swift */; };
 		41E2C36125F1488D0085B527 /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E2C36025F1488D0085B527 /* MoviesModel.swift */; };
+		41E2C37025F14A570085B527 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E2C36F25F14A570085B527 /* UserDefaultsExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		41E2C35325F12F530085B527 /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 		41E2C35B25F147D90085B527 /* MoviesSearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSearchBarDelegate.swift; sourceTree = "<group>"; };
 		41E2C36025F1488D0085B527 /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
+		41E2C36F25F14A570085B527 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,14 +258,15 @@
 		41E2C33125F0F4C90085B527 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				41E2C31025F0F3EC0085B527 /* UIImageViewExtension.swift */,
-				41E2C31525F0F3FD0085B527 /* HelveticaNeue.swift */,
-				41E2C31A25F0F40C0085B527 /* UILabelExtension.swift */,
-				41E2C33825F0F7780085B527 /* Images.swift */,
-				41E2C33D25F0FA420085B527 /* UIColorExtension.swift */,
 				41E2C34225F0FA4B0085B527 /* Colors.swift */,
+				41E2C31525F0F3FD0085B527 /* HelveticaNeue.swift */,
+				41E2C33825F0F7780085B527 /* Images.swift */,
 				41E2C34E25F12F4A0085B527 /* UIButtonExtension.swift */,
+				41E2C33D25F0FA420085B527 /* UIColorExtension.swift */,
+				41E2C31025F0F3EC0085B527 /* UIImageViewExtension.swift */,
+				41E2C31A25F0F40C0085B527 /* UILabelExtension.swift */,
 				41E2C35325F12F530085B527 /* UIStackViewExtension.swift */,
+				41E2C36F25F14A570085B527 /* UserDefaultsExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				41E2C33E25F0FA420085B527 /* UIColorExtension.swift in Sources */,
 				412B608A25EFD91200799D90 /* Endpoint.swift in Sources */,
 				415966B925EFFCF700032B49 /* MoviesNowPlaying.swift in Sources */,
+				41E2C37025F14A570085B527 /* UserDefaultsExtension.swift in Sources */,
 				41E2C34325F0FA4B0085B527 /* Colors.swift in Sources */,
 				41E2C30725F0F3C20085B527 /* MoviesViewModel.swift in Sources */,
 				41E2C31125F0F3EC0085B527 /* UIImageViewExtension.swift in Sources */,

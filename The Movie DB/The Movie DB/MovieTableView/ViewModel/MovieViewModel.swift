@@ -15,7 +15,7 @@ final class MovieViewModel {
     private(set) var id: Int
     private(set) var isFavorite: Bool = false
     
-    init(item: Movie) {
+    init(item: Movie, favoriteIds: Set<Int>) {
         self.title = item.title
         self.duration = item.duration ?? " "
         let dateFormatter = DateFormatter()
@@ -31,11 +31,17 @@ final class MovieViewModel {
         } else {
             self.imagePath = ""
         }
-        
+        isFavorite = favoriteIds.contains(item.id)
         self.id = item.id
     }
     
     func setFavorite() {
         isFavorite = !isFavorite
+        if isFavorite {
+            UserDefaults.standard.favoriteIds.insert(id)
+        } else {
+            UserDefaults.standard.favoriteIds.remove(id)
+        }
+        
     }
 }

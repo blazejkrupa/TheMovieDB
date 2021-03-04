@@ -27,7 +27,8 @@ class MoviesViewModel:NSObject {
             switch result {
             case .success(let movies):
                 self.model.nowPlayingMovies = movies
-                self.items = movies.map({ MovieViewModel(item: $0) })
+                let favoriteIds = UserDefaults.standard.favoriteIds
+                self.items = movies.map({ MovieViewModel(item: $0, favoriteIds: favoriteIds) })
             case .failure(_):
                 break
             }
@@ -39,7 +40,8 @@ class MoviesViewModel:NSObject {
     }
     
     func clear() {
-        items = model.nowPlayingMovies.map({ MovieViewModel(item: $0) })
+        let favoriteIds = UserDefaults.standard.favoriteIds
+        items = model.nowPlayingMovies.map({ MovieViewModel(item: $0, favoriteIds: favoriteIds) })
         model.searchMovie = []
     }
     
@@ -53,7 +55,8 @@ class MoviesViewModel:NSObject {
             switch result {
             case .success(let movies):
                 self.model.searchMovie = movies
-                self.items = movies.map({ MovieViewModel(item: $0) })
+                let favoriteIds = UserDefaults.standard.favoriteIds
+                self.items = movies.map({ MovieViewModel(item: $0, favoriteIds: favoriteIds) })
             case .failure(_):
                 self.items = []
             }
