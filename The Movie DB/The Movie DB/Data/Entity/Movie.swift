@@ -8,11 +8,11 @@
 import Foundation
 
 struct Movie: Decodable {
-    var poster_path: String
+    var poster_path: String?
     var title: String
     var vote_average: Double // rating
     var duration: String? // its missing in rest call
     // date format YYYY-mm-dd
-    var release_date: String
+    var release_date: String?
     var id: Int
 }

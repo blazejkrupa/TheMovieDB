@@ -12,11 +12,13 @@ final class MoviesTableViewController: UITableViewController {
     private var viewModel = MoviesViewModel()
     private lazy var moviesTableViewDelegate = MoviesTableViewDelegate(viewModel: self.viewModel)
     private lazy var moviesTableViewDataSource = MoviesTableViewDataSource(viewModel: self.viewModel)
+    private lazy var moviesSearchBarDelegate = MoviesSearchBarDelegate(viewModel: self.viewModel)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationController()
         setupTableView()
+        setupSearchController()
         bindViewModel()
     }
     
@@ -29,6 +31,17 @@ final class MoviesTableViewController: UITableViewController {
         tableView.delegate = moviesTableViewDelegate
         tableView.dataSource = moviesTableViewDataSource
         tableView.separatorStyle = .none
+    }
+    
+    private func setupSearchController() {
+        let search = UISearchController(searchResultsController: nil)
+        search.searchBar.delegate = moviesSearchBarDelegate
+        search.obscuresBackgroundDuringPresentation = false
+        if #available(iOS 11.0, *) {
+            navigationItem.searchController = search
+        } else {
+            tableView.tableHeaderView = search.searchBar
+        }
     }
     
     private func bindViewModel() {

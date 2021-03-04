@@ -19,7 +19,7 @@ enum Endpoint {
         case .movieId(let id):
             return "/movie/\(id)"
         case .searchMovie(_):
-            return "search/movie"
+            return "/search/movie"
         }
     }
     

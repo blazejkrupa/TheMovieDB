@@ -20,13 +20,18 @@ final class MovieViewModel {
         self.duration = item.duration ?? " "
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
-        if let date = dateFormatter.date(from: item.release_date) {
+        if let releaseDate = item.release_date, let date = dateFormatter.date(from: releaseDate) {
             dateFormatter.dateFormat = "MMMM dd, YYYY"
             self.releaseDate = dateFormatter.string(from: date)
         } else {
-            self.releaseDate = item.release_date
+            self.releaseDate = item.release_date ?? ""
         }
-        self.imagePath = item.poster_path
+        if let path = item.poster_path {
+            self.imagePath = path
+        } else {
+            self.imagePath = ""
+        }
+        
         self.id = item.id
     }
     

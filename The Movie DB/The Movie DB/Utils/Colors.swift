@@ -8,7 +8,7 @@
 import UIKit
 
 enum Colors: String {
-    case golden = "Golden"
+    case golden = "golden"
     
     var color: UIColor {
         if #available(iOS 11.0, *) {

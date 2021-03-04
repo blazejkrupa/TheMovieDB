@@ -10,3 +10,6 @@ import Foundation
 struct MoviesNowPlaying: Decodable {
     var results: [Movie]
 }
+struct SearchMovie: Decodable {
+    var results: [Movie]
+}

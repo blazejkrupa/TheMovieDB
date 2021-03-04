@@ -11,35 +11,32 @@ final class MoviesTableViewCell: UITableViewCell {
     
     private var coverImageView: UIImageView = .init(borderWidth: 1, contentMode: .scaleAspectFit)
     
-    private var titleLabel: UILabel = .init(text: nil, withFontType: .bold, size: 14, textColor: .black)
+    private var titleLabel: UILabel = .init(text: nil,
+                                            withFontType: .bold,
+                                            size: 14,
+                                            textColor: .black)
     
-    private var releaseDateLabel: UILabel = .init(text: nil, withFontType: .normal, size: 12, textColor: .black)
+    private var releaseDateLabel: UILabel = .init(text: nil,
+                                                  withFontType: .normal,
+                                                  size: 12,
+                                                  textColor: .black)
     
-    private var durationLabel: UILabel = .init(text: nil, withFontType: .normal, size: 12, textColor: .black)
+    private var durationLabel: UILabel = .init(text: nil,
+                                               withFontType: .normal,
+                                               size: 12,
+                                               textColor: .black)
     
-    private lazy var favoriteButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(favoriteDidTap), for: .touchUpInside)
-        button.setImage(Images.star.image, for: .normal)
-        button.tintColor = .black
-        return button
-    }()
+    private lazy var favoriteButton: UIButton = .init(target: self,
+                                                      selector: #selector(favoriteDidTap),
+                                                      image: Images.star.image,
+                                                      tint: .black)
     
-    private lazy var centerStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, dateDurationStackView])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.spacing = 8
-        return stackView
-    }()
+    private lazy var centerStackView: UIStackView = .init(arrangedSubviews: [titleLabel, dateDurationStackView],
+                                                          axis: .vertical,
+                                                          spacing: 8)
     
-    private lazy var dateDurationStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [releaseDateLabel, durationLabel])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        return stackView
-    }()
+    private lazy var dateDurationStackView: UIStackView = .init(arrangedSubviews: [releaseDateLabel, durationLabel],
+                                                                axis: .vertical)
     
     private lazy var separatorView: UIView = {
         let view = UIView()
@@ -65,6 +62,10 @@ final class MoviesTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        coverImageView.image = UIImage()
+    }
     
     private func configureCell() {
         guard let item = item else {

@@ -33,6 +33,17 @@ class MovieAPI {
         }
     }
     
+    static func fetchQuery(text: String, completion: @escaping (Result<[Movie], Error>) -> Void) {
+        RestManager.dataTask(type: SearchMovie.self, endpoint: .searchMovie(text)) { (result) in
+            switch result {
+            case .success( let searchMovie):
+                completion(.success(searchMovie.results))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
     static func fetchImage(path: String, completion: @escaping (Data?) -> Void) {
         
         if let data = MovieAPI.imageCache.object(forKey: path as NSString) {
